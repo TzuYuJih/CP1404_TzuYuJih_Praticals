@@ -14,7 +14,7 @@ def main():
 def get_data():
     """Read data from file formatted like: subject,lecturer,number of students."""
     input_file = open(FILENAME)
-    list = []
+    list1 = []
     for line in input_file:
         # print(line)  # See what a line looks like
         # print(repr(line))  # See what a line really looks like
@@ -23,9 +23,9 @@ def get_data():
         # print(parts)  # See what the parts look like (notice the integer is a string)
         parts[2] = int(parts[2])  # Make the number an integer (ignore PyCharm's warning)
         # print(parts)  # See if that worked
-        list += [parts]
+        list1.append(parts)
         print('{} is taught by {} and has {} students'.format(parts[0], parts[1], parts[2]))
-    print(list)
+    print(list1)
 
     input_file.close()
 
