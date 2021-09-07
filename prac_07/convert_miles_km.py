@@ -9,11 +9,12 @@ class convert_miles_km_app(App):
         self.root = Builder.load_file('convert_miles_km.kv')
         return self.root
     def handle_increment(self, value):
+        print()
 
     def handle_convert(self, value):
         result = value *1.61
         self.root.ids.output_label.text = str(result)
-    def get_vaild_mile(self):
+    def get_validated_mile(self):
         try:
             value = float(self.root.ids.input_number.text)
             return value
