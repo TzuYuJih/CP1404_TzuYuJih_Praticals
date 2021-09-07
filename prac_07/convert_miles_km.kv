@@ -7,14 +7,18 @@ BoxLayout:
             text: ''
             font_size: 48
             multiline: False
+            on_text: app.handle_convert()
         BoxLayout:
             orientation: 'vertical'
             Button:
                 text: 'Up'
+                on_press: app.handle_increment(input_number.text, +1)
             Button:
                 text: 'Down'
-    Button:
-        text: 'Covert m to km'
+#    Button:
+#        text: 'Covert m to km'
+#        on_press: app.handle_convert(float(input_number.text))
     Label:
+        id: output_label
         text: 'Answer'
         color: (1,1,0,1)
